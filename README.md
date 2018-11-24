@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 *******TO RUN SITE FIRST LOAD DATA INTO DATABASE BY RUNNING python manage.py load_books IN TERMINAL*******
 
 
+=======
+******* To view site first run " python manage.py load_books " in terminal so books load into database*****
+>>>>>>> 65887096b6b3636a5b2aa6c41106c42676c83495
 
 # Freeshelf
 
