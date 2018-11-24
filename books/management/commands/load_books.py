@@ -24,7 +24,7 @@ class Command(BaseCommand):
             for row in reader:
                 i += 1
                 book = Book(
-                    name=row['name'],
+                    title=row['title'],
                     author=row['author'],
                     description=row['description'],
                     python=row['python'],
