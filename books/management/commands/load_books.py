@@ -32,5 +32,5 @@ class Command(BaseCommand):
                     html=row['html'],
                     javascript=row['javascript'],
                 )
-            book.save()
+                book.save()
         print(f"{i} books loaded!")

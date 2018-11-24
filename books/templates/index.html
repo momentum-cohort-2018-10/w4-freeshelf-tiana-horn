@@ -7,10 +7,15 @@
 
 {% block content %}
     <h1> Freeshelf Freeshelf </h1>
+
     {% for book in books %}
-        <h2><a href="{% url 'book_detail' slug=book.slug %}">
-            {{ book.name }}
-        </a></h2>
+        {% comment %} <h2><a href="{% url 'book_detail' slug=book.slug %}">
+            {{ book.title }}
+        </a></h2>  {% endcomment %}
+        <h2>{{ book.title }}</h2>
+        <h3>{{ book.author }}</h3>
         <p>{{ book.description }}</p>
+    
     {% endfor %}
+
 {% endblock content %}
