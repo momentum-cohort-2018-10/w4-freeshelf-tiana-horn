@@ -26,7 +26,9 @@ from books import views
 urlpatterns = [
     path('admin/', admin.site.urls),    
     path('', views.index, name='book_list'),
-    # path('books/<slug>', views.book_detail, name='book'),
+    path('books/<slug>/', views.book_detail, name='book_detail'),
+    path('category/python/',views.python, name='python')
+
 
 
 ]

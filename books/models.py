@@ -11,6 +11,7 @@ class Book(models.Model):
     html = models.BooleanField(default=False)
     javascript = models.BooleanField(default=False)
     picture = models.ImageField(upload_to='books/', null=True)
+    created_at = models.DateTimeField(auto_now_add=True)
     slug = models.SlugField(unique=True)
     # user = models.OnetoOneField(User, on_delete=models.CASCADE,
     # blank=True, null=True)
@@ -25,6 +26,7 @@ class Book(models.Model):
             categories.append("HTML")
         if self.javascript:
             categories.append("Javascript")
+        return categories
     
     def __str__(self):
         return self.title

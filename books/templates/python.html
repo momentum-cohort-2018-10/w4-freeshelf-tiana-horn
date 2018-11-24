@@ -6,22 +6,24 @@
 {% endblock title %}
 
 {% block content %}
-    <h1> Freeshelf Freeshelf </h1>
-    <a href="{% url 'python' %}">Python</a>
+    <h1> Python Books </h1>
 
-    {% for book in books %}
-        <h2><a href="{% url 'book_detail' slug=book.slug %}">
+    {% for book in books %} 
+    <p> Python Books </p>
+        {% if book.get_category == Python %}
+             {{ book.title }}
+        {% endif %}
+
+        {% comment %} <h2><a href="{% url 'book_detail' slug=book.slug %}">
             {{ book.title }}
         </a></h2> 
         <a href="{% url 'book_detail' slug=book.slug %}">
         <img src="{{ book.picture.url }}"></a>
         <h3>{{ book.author }}</h3>
         <p>{{ book.description }}</p>
-        <p>added {{ book.created_at }}</p>
-        {% for category in book.get_categories %}
-             {{ category }}
-        {% endfor %}
+        <p>added {{ book.created_at }}</p> {% endcomment %}
+
     
-    {% endfor %}
+    {% endfor %} 
 
 {% endblock content %}
