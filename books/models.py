@@ -10,8 +10,8 @@ class Book(models.Model):
     css = models.BooleanField(default=False)
     html = models.BooleanField(default=False)
     javascript = models.BooleanField(default=False)
-    # pictures = models.ImageField(upload_to='books/', null=True)
-    # slug = models.SlugField(unique=True)
+    picture = models.ImageField(upload_to='books/', null=True)
+    slug = models.SlugField(unique=False, null=True)
     # user = models.OnetoOneField(User, on_delete=models.CASCADE,
     # blank=True, null=True)
 

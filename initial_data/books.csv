@@ -1,5 +1,5 @@
-title,author,description,python,css,html,javascript,
-Two Scoops of Django,Billy Bob,a book about Django,1,0,0,0,
-CSS for Dummies,Smarty Pants,A thrilling tale of CSS,0,1,0,0,
-CodeCademy Essentials,Tracy McGrady,a book about coding,1,1,1,0,
+title,author,description,python,css,html,javascript,slug,image
+Two Scoops of Django,Billy Bob,a book about Django,1,0,0,0,scoops,django.jpg
+CSS for Dummies,Smarty Pants,A thrilling tale of CSS,0,1,0,0,cssfor,cssfor.jpg
+CodeCademy Essentials,Tracy McGrady,a book about coding,1,1,1,0,codec,codeess.jpg
 

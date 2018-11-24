@@ -31,6 +31,9 @@ class Command(BaseCommand):
                     css=row['css'],
                     html=row['html'],
                     javascript=row['javascript'],
+                    slug=row['slug']
                 )
+                book.picture.save(row['image'],
+                                  File(open(get_path(row['image']), 'rb')))
                 book.save()
         print(f"{i} books loaded!")
