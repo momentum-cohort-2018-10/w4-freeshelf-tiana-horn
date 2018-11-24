@@ -1,3 +1,4 @@
-name,description
-Two Scoops of Django,A very good book
-CodeCademy Essentials, A great book
+title,author,description,python,css,html,javascript
+Two Scoops of Django,Billy Bob,a book about Django,1,0,0,0
+CodeCademy Essentials,Tracy McGrady,a book about coding,1,1,1,0
+CSS for Dummies,Smarty Pants,A thrilling tale of CSS,0,1,0,0

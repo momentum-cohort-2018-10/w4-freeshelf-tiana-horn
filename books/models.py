@@ -3,7 +3,8 @@ from django.db import models
 
 # Create your models here.
 class Book(models.Model):
-    name = models.CharField(max_length = 500, null=False, blank=False)
+    title = models.CharField(max_length = 500, null=False, blank=False)
+    author = models.CharField(max_length = 255, null=False, blank=False)
     description = models.TextField()
     python = models.BooleanField(default=False)
     css = models.BooleanField(default=False)
@@ -26,4 +27,4 @@ class Book(models.Model):
             categories.append("Javascript")
     
     def __str__(self):
-        return self.name
+        return self.title

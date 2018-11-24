@@ -2,15 +2,12 @@
 {% load humanize %}
 {% load staticfiles %}
 {% block title %}
-    Homepage - {{ block.super }}
+    {{ book.name }} - {{ block.super }}
 {% endblock title %}
 
 {% block content %}
-    <h1> Freeshelf Freeshelf </h1>
-    {% for book in books %}
-        <h2><a href="{% url 'book_detail' slug=book.slug %}">
-            {{ book.name }}
-        </a></h2>
+        <h2>{{ book.name }}</h2>
+        <p>"Written by:"{{ book.author }}<p>
         <p>{{ book.description }}</p>
     {% endfor %}
 {% endblock content %}

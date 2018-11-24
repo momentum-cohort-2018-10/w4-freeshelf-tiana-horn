@@ -3,8 +3,13 @@ from books.models import Book
 
 class BookAdmin(admin.ModelAdmin):
     model = Book
-    list_display = ('name', 'description',)
-    prepopulated_fields = {'slug': ('name',)}
+    list_display = (
+        'title', 
+        'author',
+        'description',
+
+    )
+    prepopulated_fields = {'slug': ('title',)}
 
 # Register your models here.
 admin.site.register(Book, BookAdmin)

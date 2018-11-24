@@ -25,7 +25,12 @@ class Command(BaseCommand):
                 i += 1
                 book = Book(
                     name=row['name'],
+                    author=row['author'],
                     description=row['description'],
+                    python=row['python'],
+                    css=row['css'],
+                    html=row['html'],
+                    javascript=row['javascript'],
                 )
             book.save()
         print(f"{i} books loaded!")
