@@ -18,7 +18,7 @@
         </a></h2> 
         <a href="{% url 'book_detail' slug=book.slug %}">
         <img src="{{ book.picture.url }}"></a>
-        <h3>{{ book.author }}</h3>
+        <h3>Written by: {{ book.author }}</h3>
         <p>{{ book.description }}</p>
         <p>added {{ book.created_at }}</p>
         {% for category in book.get_categories %}
