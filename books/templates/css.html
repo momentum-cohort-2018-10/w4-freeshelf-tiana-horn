@@ -6,10 +6,10 @@
 {% endblock title %}
 
 {% block content %}
-    <h1> Python Books </h1>
+    <h1> CSS Books </h1>
 
 
-    {% for book in python_books %}
+    {% for book in css_books %}
         <h2><a href="{% url 'book_detail' slug=book.slug %}">
             {{ book.title }}
         </a></h2> 

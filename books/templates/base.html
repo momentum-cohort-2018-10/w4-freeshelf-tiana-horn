@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
     {% block header %}{% endblock header %}
 </head>
+    <a href="{% url 'book_list' %}">Home</a>
 <body>
     {% block content %}{% endblock content %}
     {% block footer %}{% endblock footer %}

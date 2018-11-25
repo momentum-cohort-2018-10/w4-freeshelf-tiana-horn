@@ -15,8 +15,26 @@ def book_detail(request, slug):
     })
 
 def python(request):
-    category = Book.get_categories
+    python_books = Book.objects.filter(python=True)
     return render(request, 'python.html', {
-        'category': category
+        'python_books': python_books,
+    })
+
+def css(request):
+    css_books = Book.objects.filter(css=True)
+    return render(request, 'css.html', {
+        'css_books': css_books,
+    })
+
+def html(request):
+    html_books = Book.objects.filter(html=True)
+    return render(request, 'html.html', {
+        'html_books': html_books,
+    })
+
+def javascript(request):
+    javascript_books = Book.objects.filter(javascript=True)
+    return render(request, 'javascript.html', {
+        'javascript_books': javascript_books,
     })
  

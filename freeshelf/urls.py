@@ -27,10 +27,11 @@ urlpatterns = [
     path('admin/', admin.site.urls),    
     path('', views.index, name='book_list'),
     path('books/<slug>/', views.book_detail, name='book_detail'),
-    path('category/python/',views.python, name='python')
-
-
-
+    path('category/python/',views.python, name='python'),
+    path('category/css/',views.css, name='css'),
+    path('category/html/',views.html, name='html'),
+    path('category/javascript/',views.javascript, name='javascript'),
+    
 ]
 if settings.DEBUG:
     urlpatterns += static(

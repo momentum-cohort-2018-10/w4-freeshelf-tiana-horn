@@ -8,6 +8,9 @@
 {% block content %}
     <h1> Freeshelf Freeshelf </h1>
     <a href="{% url 'python' %}">Python</a>
+    <a href="{% url 'css' %}">CSS</a>
+    <a href="{% url 'html' %}">HTML</a>
+    <a href="{% url 'javascript' %}">Javascript</a>
 
     {% for book in books %}
         <h2><a href="{% url 'book_detail' slug=book.slug %}">
