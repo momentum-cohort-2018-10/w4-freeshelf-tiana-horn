@@ -7,7 +7,8 @@
 
 {% block content %}
         <h2>{{ book.title }}</h2>
+        <a class="f8 link grow dib" href="{{ book.link }}">
+        <img src="{{ book.picture.url }}"></a>
         <p>Written by: {{ book.author }}<p>
-        <p>{{ book.description }}</p>
-        <p>Link to Full Book: {{ book.link }}</p>
+        <p class="f5 light-gray">{{ book.description }}</p>
 {% endblock content %}

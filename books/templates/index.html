@@ -24,14 +24,14 @@
         </a></h2> 
         <h3>Written by: {{ book.author }}</h3>
         <p class="f3 light-gray lh-title">{{ book.description }}</p>
-        <p class="mid-gray">added {{ book.created_at }}</p>
+        <p>added {{ book.created_at }}</p>
 
 
-        <a href="{{ book.link }}"> Link To Full Book</a>
+        <a class="f7 link grow ph2 pv2 mb2 dib white bg-mid-gray" href="{{ book.link }}"> Link To Full Book</a>
 
-        <p>Categories:</p>
+        <p class ="mid-gray">Categories:</p>
         {% for category in book.get_categories %}
-             {{ category }}
+            <p class="light-gray"> {{ category }}</p>
       
         {% endfor %}
     </div>  
