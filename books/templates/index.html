@@ -17,15 +17,16 @@
 
     {% for book in books %}
         <div class="fl w-30 justify-between items-center center">
-        <h2><a class="white" href="{% url 'book_detail' slug=book.slug %}">
+        <a class="f8 link grow dib" href="{% url 'book_detail' slug=book.slug %}">
+        <img src="{{ book.picture.url }}"></a>
+        <h2><a class="f3 link dim ph1 pv2 mb1 dib orange bg-white" href="{% url 'book_detail' slug=book.slug %}">
             {{ book.title }}
         </a></h2> 
-        <a class="br2" href="{% url 'book_detail' slug=book.slug %}">
-        <img src="{{ book.picture.url }}"></a>
         <h3>Written by: {{ book.author }}</h3>
-        <p class="f3 mid-gray lh-title">{{ book.description }}</p>
-        <p>added {{ book.created_at }}</p>
-        
+        <p class="f3 light-gray lh-title">{{ book.description }}</p>
+        <p class="mid-gray">added {{ book.created_at }}</p>
+        <p>Link to Full Book: {{ book.link }}</p>
+ 
         <p>Categories:</p>
         {% for category in book.get_categories %}
              {{ category }}

@@ -1,5 +1,7 @@
-title,author,description,python,css,html,javascript,slug,image
-Two Scoops of Django,Billy Bob,a book about Django,1,0,0,1,scoops,django.jpg
-CSS for Dummies,Smarty Pants,A thrilling tale of CSS,0,1,0,0,cssfor,cssfor.jpg
-CodeCademy Essentials,Tracy McGrady,a book about coding,1,1,1,0,codec,codeess.jpg
-
+title,author,description,python,css,html,javascript,slug,image,link
+Adaptive Web Design,Aaron Gustafon,Crafting Rich Experiences with Progressive Enhancement,0,1,0,1,adaptive,Adaptive.jpg,www.adaptivewebdesign.info/1st-edition/
+A Byte of Python,Swaroop C H,A Tutorial or Guide to the Python Language for a Beginner Audience,1,0,0,0,byte,ByteOfPython.jpg,www.python.swaroopch.com/
+Dive Into HTML5,Mark Pilgrim, A Community Ebook to Discover HTML5 Best Practices and Experiment with Javascript,0,0,1,1,divehtml,DiveIntoHTML.jpg,www.diveinto.html5doctor.com/
+Dive Into Python 3,Mark Pilgrim,Dive Into Python 3 Covers Python 3 and its Differences from Python 2,1,0,0,0,divepython,DiveIntoPython.jpg,www.getpython3.com/diveintopython3/
+JavaScript For Impatient Programmers,Dr. Axel Rauschmayer,Make JavaScript Less Challenging to Learn for Newcomers by Offering a Modern View That Is As Consistent As Possible,0,0,0,1,jsfor,JavascriptFor.jpg,www.exploringjs.com/impatient-js/
+Marksheet: A Free HTML & CSS Tutorial,Jeremy Thomas,For Absolute Beginners and Designers Willing To Start Right Away,0,1,1,0,marksheet,Marksheet.jpg,www.marksheet.io/

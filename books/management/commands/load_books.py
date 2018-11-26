@@ -31,7 +31,8 @@ class Command(BaseCommand):
                     css=row['css'],
                     html=row['html'],
                     javascript=row['javascript'],
-                    slug=row['slug']
+                    slug=row['slug'],
+                    link=row['link'],
                 )
                 book.picture.save(row['image'],
                                   File(open(get_path(row['image']), 'rb')))
