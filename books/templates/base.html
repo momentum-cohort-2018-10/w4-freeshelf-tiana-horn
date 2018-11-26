@@ -9,7 +9,10 @@
     </title>
     <link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css"/>
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
-    {% block header %}{% endblock header %}
+
+    {% block header %}
+    
+    {% endblock header %}
 </head>
     <a href="{% url 'book_list' %}">Home</a>
     {% if user.is_authenticated %}
@@ -18,8 +21,10 @@
         <a href="{% url 'auth_login' %}">Login</a>
         <a href="{% url 'registration_register' %}">Register</a>
     {% endif %}
-<body>
+<body class="georgia fl w-third" >
+
     {% block content %}{% endblock content %}
     {% block footer %}{% endblock footer %}
+
 </body>
 </html>

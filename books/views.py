@@ -1,5 +1,9 @@
 from django.shortcuts import render, redirect
 from books.models import Book
+# from books.forms import SuggestionForm
+from django.contrib.auth import authenticate, login
+from django.contrib.auth.views import login_required
+
 
 # Create your views here.
 def index(request):
@@ -38,3 +42,19 @@ def javascript(request):
         'javascript_books': javascript_books,
     })
  
+# # @login_required
+# def book_suggestion(request):
+#     form_class = SuggestionForm
+#     if request.POST:
+#         form = SuggestionForm(data=request.POST, instance=None)
+#         if form.is_valid():
+#             form.save()
+#             return redirect('book_list')
+#         else: 
+#             form=form_class(instance=None)
+
+#     return render(request, "book_suggestion.html", {
+#         "form": form,
+
+
+#     })

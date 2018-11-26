@@ -1,19 +1,24 @@
 {% extends 'base.html' %}
 {% load humanize %}
 {% load staticfiles %}
+
+<link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css"/>
+<link rel="stylesheet" href="{% static 'css/style.css' %}" />
 {% block title %}
     Homepage - {{ block.super }}
 {% endblock title %}
 
-{% block content %}
-    <h1> Freeshelf Freeshelf </h1>
-    <a href="{% url 'python' %}">Python</a>
-    <a href="{% url 'css' %}">CSS</a>
-    <a href="{% url 'html' %}">HTML</a>
-    <a href="{% url 'javascript' %}">Javascript</a>
 
+
+    <a class="white" href="{% url 'python' %}">Python</a>
+    <a class="white" href="{% url 'css' %}">CSS</a>
+    <a class="white" href="{% url 'html' %}">HTML</a>
+    <a class="white" href="{% url 'javascript' %}">Javascript</a>
+{% block content %}
+    {% comment %} <a href="{% url 'book_suggestion' %}">Would you like to suggest a book?</a> {% endcomment %}
+    <h1> Freeshelf Freeshelf </h1>
     {% for book in books %}
-        <h2><a href="{% url 'book_detail' slug=book.slug %}">
+        <h2><a class="white" href="{% url 'book_detail' slug=book.slug %}">
             {{ book.title }}
         </a></h2> 
         <a href="{% url 'book_detail' slug=book.slug %}">

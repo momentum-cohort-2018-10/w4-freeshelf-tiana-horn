@@ -35,5 +35,6 @@ class Command(BaseCommand):
                 )
                 book.picture.save(row['image'],
                                   File(open(get_path(row['image']), 'rb')))
+                # if book not in Book.objects.all():
                 book.save()
         print(f"{i} books loaded!")

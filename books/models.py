@@ -1,4 +1,4 @@
-from django.contrib.auth.models import User
+from django.contrib.auth.models import AbstractUser
 from django.db import models
 
 # Create your models here.
@@ -30,3 +30,12 @@ class Book(models.Model):
     
     def __str__(self):
         return self.title
+
+# class User(AbstractUser):
+#     pass
+
+# class Suggestion(models.Model):
+#     user = models.OneToOneField(to='User', on_delete=models.CASCADE)
+#     name = models.CharField("Your name", max_length=255)
+#     book_suggestion = models.CharField("Name of Book", max_length=255)
+#     link_to_book = models.CharField(max_length = 255)

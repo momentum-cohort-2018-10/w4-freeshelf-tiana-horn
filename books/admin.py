@@ -8,3 +8,5 @@ class BookAdmin(admin.ModelAdmin):
 
 # Register your models here.
 admin.site.register(Book, BookAdmin)
+# admin.site.register(Suggestion)
+# admin.site.register(User)

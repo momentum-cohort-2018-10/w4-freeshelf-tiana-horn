@@ -46,7 +46,7 @@ urlpatterns = [
         template_name='registration/password_reset_confirm.html'), name='password_reset_confirm'),
     path('accounts/password/done/', PasswordResetCompleteView.as_view(
         template_name='registration/password_reset_complete.html'), name='password_reset_complete'),
-    
+    # path('suggestion/', views.book_suggestion, name='book_suggestion'),
 ]
 if settings.DEBUG:
     urlpatterns += static(
