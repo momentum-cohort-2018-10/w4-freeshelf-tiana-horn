@@ -10,26 +10,28 @@
 
 
 
-    <a class="white" href="{% url 'python' %}">Python</a>
-    <a class="white" href="{% url 'css' %}">CSS</a>
-    <a class="white" href="{% url 'html' %}">HTML</a>
-    <a class="white" href="{% url 'javascript' %}">Javascript</a>
+
 {% block content %}
     {% comment %} <a href="{% url 'book_suggestion' %}">Would you like to suggest a book?</a> {% endcomment %}
-    <h1> Freeshelf Freeshelf </h1>
+    <h1 class="f2 lh-title fw9 mb3 mt0 pt3 bt bw2"> Freeshelf Freeshelf</h1>
+
     {% for book in books %}
+        <div class="fl w-30 justify-between items-center center">
         <h2><a class="white" href="{% url 'book_detail' slug=book.slug %}">
             {{ book.title }}
         </a></h2> 
-        <a href="{% url 'book_detail' slug=book.slug %}">
+        <a class="br2" href="{% url 'book_detail' slug=book.slug %}">
         <img src="{{ book.picture.url }}"></a>
         <h3>Written by: {{ book.author }}</h3>
-        <p>{{ book.description }}</p>
+        <p class="f3 mid-gray lh-title">{{ book.description }}</p>
         <p>added {{ book.created_at }}</p>
+        
+        <p>Categories:</p>
         {% for category in book.get_categories %}
              {{ category }}
+      
         {% endfor %}
-    
+    </div>  
     {% endfor %}
 
 {% endblock content %}

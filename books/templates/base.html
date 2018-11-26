@@ -7,25 +7,33 @@
             Freeshelf Freeshelf
         {% endblock title %}
     </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css"/>
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
-<article class="cf ph3 ph5-ns pv5">
+<article class="cf ph3 ph5-ns pv5 vh-100 dt w-100">
 
     {% block header %}
-    
     {% endblock header %}
 </head>
-    <a href="{% url 'book_list' %}">Home</a>
+    <a class="ph1" href="{% url 'book_list' %}">Home</a>
     {% if user.is_authenticated %}
-        <a href="{% url 'auth_logout' %}">Logout</a>
+        <a class="ph1" href="{% url 'auth_logout' %}">Logout</a>
     {% else %}
-        <a href="{% url 'auth_login' %}">Login</a>
-        <a href="{% url 'registration_register' %}">Register</a>
+        <a class="ph1" href="{% url 'auth_login' %}">Login</a>
+        <a class="ph1" href="{% url 'registration_register' %}">Register</a>
     {% endif %}
-<body class="georgia fl w-third" >
+<body class="georgia" >
+
+   <h3>Browse By Category</h3>
+    <a class="white ph1" href="{% url 'python' %}">Python</a>
+    <a class="white ph1" href="{% url 'css' %}">CSS</a>
+    <a class="white ph1" href="{% url 'html' %}">HTML</a>
+    <a class="white ph1" href="{% url 'javascript' %}">Javascript</a>
 
     {% block content %}{% endblock content %}
     {% block footer %}{% endblock footer %}
-</article>
+
 </body>
+</article>
+
 </html>
