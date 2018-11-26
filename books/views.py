@@ -3,6 +3,7 @@ from books.models import Book
 # from books.forms import SuggestionForm
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.views import login_required
+from django.contrib.auth.models import User, AbstractUser
 
 
 # Create your views here.
@@ -42,19 +43,21 @@ def javascript(request):
         'javascript_books': javascript_books,
     })
  
-# # @login_required
+# @login_required
 # def book_suggestion(request):
-#     form_class = SuggestionForm
+#     current_user = request.user
 #     if request.POST:
-#         form = SuggestionForm(data=request.POST, instance=None)
+#         form = SuggestionForm(request.POST, instance=current_user)
 #         if form.is_valid():
-#             form.save()
+#             suggestion = form.save(commit=True)
+#             suggestion.save()
 #             return redirect('book_list')
-#         else: 
-#             form=form_class(instance=None)
+#         else:
+#             form = SuggestionForm(instance=current_user)
 
 #     return render(request, "book_suggestion.html", {
 #         "form": form,
+        
 
 
 #     })

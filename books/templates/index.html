@@ -12,7 +12,7 @@
 
 
 {% block content %}
-    {% comment %} <a href="{% url 'book_suggestion' %}">Would you like to suggest a book?</a> {% endcomment %}
+    {% comment %} <a class="ph2" href="{% url 'book_suggestion' %}">Would you like to suggest a book?</a> {% endcomment %}
     <h1 class="f2 lh-title fw9 mb3 mt0 pt3 bt bw2"> Freeshelf Freeshelf</h1>
 
     {% for book in books %}
@@ -25,8 +25,10 @@
         <h3>Written by: {{ book.author }}</h3>
         <p class="f3 light-gray lh-title">{{ book.description }}</p>
         <p class="mid-gray">added {{ book.created_at }}</p>
-        <p>Link to Full Book: {{ book.link }}</p>
- 
+
+
+        <a href="{{ book.link }}"> Link To Full Book</a>
+
         <p>Categories:</p>
         {% for category in book.get_categories %}
              {{ category }}

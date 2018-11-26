@@ -1,4 +1,4 @@
-from django.contrib.auth.models import AbstractUser
+from django.contrib.auth.models import User, AbstractUser
 from django.db import models
 
 # Create your models here.
@@ -12,7 +12,7 @@ class Book(models.Model):
     javascript = models.BooleanField(default=False)
     picture = models.ImageField(upload_to='books/', null=True)
     created_at = models.DateTimeField(auto_now_add=True)
-    link = models.TextField()
+    link = models.URLField(unique=True)
     slug = models.SlugField(unique=True)
     # user = models.OnetoOneField(User, on_delete=models.CASCADE,
     # blank=True, null=True)
@@ -32,11 +32,10 @@ class Book(models.Model):
     def __str__(self):
         return self.title
 
-# class User(AbstractUser):
-#     pass
 
 # class Suggestion(models.Model):
-#     user = models.OneToOneField(to='User', on_delete=models.CASCADE)
+#     # user = models.OneToOneField(to='User', on_delete=models.CASCADE)
+#     user = models.ForeignKey(to=User, on_delete=models.CASCADE)
 #     name = models.CharField("Your name", max_length=255)
 #     book_suggestion = models.CharField("Name of Book", max_length=255)
-#     link_to_book = models.CharField(max_length = 255)
+#     link_to_book = models.URLField(unique=True)
